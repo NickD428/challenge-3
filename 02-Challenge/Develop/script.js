@@ -33,12 +33,12 @@ function writePassword(length) {
     password += numbers[Math.floor(Math.random() * numbers.length)];
     window.alert("The password will include numbers");
   }
-  passwordText.value = password;
 
-  for(var i = 0, n = all.length; i < length; i++) {
-    password += all.charAt(Math.floor(Math.random() * n));
-    return password;
+  while (password.length < length) {
+    var passwordLength = Math.floor(Math.random() * all.length);
+    password += all[passwordLength];
   }
+  passwordText.value = password;
 }
 
 // Add event listener to generate button

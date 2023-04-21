@@ -1,16 +1,24 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-const upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ;"
-const numbers = "1234567890";
-const special = "!?@#$%^&*-+=";
-const all = lowerCase + upperCase + numbers + special;
+
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword(Math.random(all));
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var charset = '';
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ;"
+  var numbers = "1234567890";
+  var special = "!?@#$%^&*-+=";
+  var includeSpecials = confirm('Would you like to include symbols?');
+  var includeNumbers = confirm('Would you like to include numbers?');
+  var includeLowerCase = confirm('Would you like to include lower case letters?');
+  var includeUpperCase = confirm('Would you like to include upper case letters?');
+  
+  if (includeSpecials) {
 
+  }
   passwordText.value = password;
 
 }

@@ -16,7 +16,9 @@ function writePassword(length) {
   var includeNumbers = window.confirm('Would you like to include numbers?');
   var includeLowerCase = window.confirm('Would you like to include lower case letters?');
   var includeUpperCase = window.confirm('Would you like to include upper case letters?');
-  
+
+  // These if statements control the random numbers and letters for the password  
+ 
   if (includeSpecials) {
     password += special[Math.floor(Math.random() * special.length)];
     window.alert("The password will include special symbols");
@@ -33,7 +35,7 @@ function writePassword(length) {
     password += numbers[Math.floor(Math.random() * numbers.length)];
     window.alert("The password will include numbers");
   }
-
+// while function to make sure the length of the password matches the input
   while (password.length < length) {
     var passwordLength = Math.floor(Math.random() * all.length);
     password += all[passwordLength];
